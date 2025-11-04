@@ -17,4 +17,12 @@ interface ContactDao {
     @Query("SELECT * FROM contact ORDER BY firstName ASC")
     //ascending order
     fun getContactsOrderedByFirstName(): Flow<List<Contact>>
+
+    @Query("SELECT * FROM contact ORDER BY lastName ASC")
+    //ascending order
+    fun getContactsOrderedByLastName(): Flow<List<Contact>>
+
+    @Query("SELECT * FROM contact ORDER BY phoneNumber ASC")
+    //ascending order
+    fun getContactsOrderedByPhoneNumber(): Flow<List<Contact>>
 }
